@@ -15,13 +15,13 @@ function Rectangle(width, height) {
     this.height = side;
     this.width = side;
   }
+    
+  Square.prototype = new Rectangle();
   
   Square.prototype.toString = function () {
     return `Square with height:${this.height} and width:${this.width}`;
   };
-  
-  Square.prototype = new Rectangle();
-  
+
   const rect = new Rectangle(4, 5);
   console.log(rect.calculateSquare());
   
