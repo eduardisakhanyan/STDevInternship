@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Users</title>
+</head>
+
+<body>
+    <div id="main">
+        <button id='add'>Add new Person</button>
+        <table id="table"  class="table" onclick="deleteRow()">
+            <tbody id="tbody">
+                <tr>
+                    <th>Balance</th>
+                    <th>Age</th>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Company</th>
+                    <th>E-mail</th>
+                </tr>
+            </tbody>
+        </table>
+        <form id="formAddNew" class="form">
+            <div>
+                <label for="balance">Balance:</label>
+                <input type="text" id="balance" name="balance">
+            </div>
+            <div>
+                <label for="age">Age:</label>
+                <input type="text" id="age" name="age">
+            </div>
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+            </div>
+            <div>
+                <label for="gender">Gender:</label>
+                <input type="text" id="gender" name="gender">
+            </div>
+            <div>
+                <label for="company">Company:</label>
+                <input type="text" id="company" name="company">
+            </div>
+            <div>
+                <label for="email">E-Mail:</label>
+                <input type="text" id="email" name="email"></input>
+            </div>
+            <button type='submit'>Add</button>
+        </form>
+        <form id="formEdit" class="form">
+                <div>
+                    <label for="balance">Balance:</label>
+                    <input type="text" id="balance" name="balance">
+                </div>
+                <div>
+                    <label for="age">Age:</label>
+                    <input type="text" id="age" name="age">
+                </div>
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name">
+                </div>
+                <div>
+                    <label for="gender">Gender:</label>
+                    <input type="text" id="gender" name="gender">
+                </div>
+                <div>
+                    <label for="company">Company:</label>
+                    <input type="text" id="company" name="company">
+                </div>
+                <div>
+                    <label for="email">E-Mail:</label>
+                    <input type="text" id="email" name="email"></input>
+                </div>
+                <button type='submit'>Edit</button>
+            </form>
+    </div>
+    <script src="table.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+.form {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: none;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
