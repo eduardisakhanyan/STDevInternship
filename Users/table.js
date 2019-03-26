@@ -19,7 +19,7 @@ function addNewRow() {
         })
             .then(response => response.text())
             .then(text => console.log(text))
-            .then(() => drawTable());
+            .then(() => createTable());
         form.style.display = "none";
     });
 
@@ -31,6 +31,7 @@ function createTable() {
 
     function createTable(data) {
         let tbody = document.getElementById('tbody');
+        tbody.innerHTML = '';
         for (let i = 0; i < data.length; ++i) {
             let tr = document.createElement('tr');
             for (let key in data[i]) {
@@ -63,7 +64,7 @@ function deleteRow(e) {
     console.log(id);
     fetch('http://localhost:3004/users/' + id, {
         method: "DELETE"
-    }).then(() => drawTable());
+    }).then(() => createTable());
 }
 
 function editRow(e) {
@@ -89,16 +90,9 @@ function editRow(e) {
         })
             .then(response => response.text())
             .then(text => console.log(text))
-            .then(()=>drawTable());
+            .then(()=>createTable());
         form.style.display = "none";
     });
-}
-
-function drawTable() {
-    let tbody = document.getElementById('tbody');
-    for (let i = 0; i < tbody.rows.length; ++i) {
-        console.log(tbody.rows[i]); 
-    }
 }
 
 createTable();

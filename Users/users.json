@@ -11,39 +11,12 @@
     },
     {
       "balance": "$2,820.18",
-      "age": 34,
+      "age": "34",
       "name": "Kristie Cole",
       "gender": "female",
       "company": "QUADEEBO",
-      "email": "kristiecole@quadeebo.com",
+      "email": "kristiecole",
       "id": "3"
-    },
-    {
-      "balance": "$3,277.32",
-      "age": 30,
-      "name": "Leonor Cross",
-      "gender": "female",
-      "company": "GRONK",
-      "email": "leonorcross@gronk.com",
-      "id": "4"
-    },
-    {
-      "balance": "$1,972.47",
-      "age": 28,
-      "name": "Marsh Mccall",
-      "gender": "male",
-      "company": "ULTRIMAX",
-      "email": "marshmccall@ultrimax.com",
-      "id": "5"
-    },
-    {
-      "balance": "1",
-      "age": "1",
-      "name": "1",
-      "gender": "1",
-      "company": "1",
-      "email": "1",
-      "id": "9iGZFcO"
     }
   ]
 }
