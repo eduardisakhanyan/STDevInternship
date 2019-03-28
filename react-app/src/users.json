@@ -1,0 +1,31 @@
+{
+  "users": [
+    {
+      "balance": "$2,499.49",
+      "age": "13",
+      "name": "Lillian Burgess",
+      "gender": "female",
+      "company": "LUXURIA",
+      "email": "lillianburgess@luxuria.com",
+      "id": "2"
+    },
+    {
+      "id": "3",
+      "balance": "$2,820.18",
+      "age": 34,
+      "name": "Kristie Cole",
+      "gender": "female",
+      "company": "QUADEEBO",
+      "email": "kristiecole@quadeebo.com"
+    },
+    {
+      "id": "4",
+      "balance": "$3,277.32",
+      "age": 30,
+      "name": "Leonor Cross",
+      "gender": "female",
+      "company": "GRONK",
+      "email": "leonorcross@gronk.com"
+    }
+  ]
+}
