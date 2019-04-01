@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "email": "t@gmail.com",
+      "username": "tikoedo",
+      "password": "t",
+      "id": "1"
+    },
+    {
+      "email": "naro@gmail.com",
+      "username": "narine",
+      "password": "esgijem",
+      "id": "2"
+    },
+    {
+      "email": "barevSirun@gmail.com",
+      "username": "siruns",
+      "password": "",
+      "id": "gSuU1Pb"
+    }
+  ]
+}
