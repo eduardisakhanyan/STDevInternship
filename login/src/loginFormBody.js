@@ -30,9 +30,9 @@ let LoginFormBody = props => {
 LoginFormBody = reduxForm({
   form: 'login',
   initialValues: {
-    email: 'barevSirun@gmail.com',
+    email: 'ebarvSirun@gmail.com',
     username: 'siruns',
-    password: '',
+    password: '123456',
   }
 })(LoginFormBody)
 

@@ -1,22 +1,53 @@
 {
   "users": [
     {
-      "email": "t@gmail.com",
-      "username": "tikoedo",
-      "password": "t",
-      "id": "1"
-    },
-    {
-      "email": "naro@gmail.com",
-      "username": "narine",
-      "password": "esgijem",
-      "id": "2"
-    },
-    {
-      "email": "barevSirun@gmail.com",
+      "email": "ebarvSirun@gmail.com",
       "username": "siruns",
-      "password": "",
-      "id": "gSuU1Pb"
+      "password": "123456",
+      "token": "169e1eb0f56",
+      "id": 1
+    }
+  ],
+  "products": [
+    {
+      "name": "dzmeruk",
+      "price": "1000",
+      "exp.date": "10or",
+      "userId": "1",
+      "id": 1
+    },
+    {
+      "name": "Varung",
+      "price": "100",
+      "expDate": "10",
+      "userId": 1,
+      "id": 2
+    },
+    {
+      "name": "Varung",
+      "price": "123",
+      "expDate": "15",
+      "id": 3
+    },
+    {
+      "name": "xmor",
+      "price": "1000",
+      "expDate": "15",
+      "id": 4
+    },
+    {
+      "name": "Varung",
+      "price": "123",
+      "expDate": "15",
+      "userId": 1,
+      "id": 5
+    },
+    {
+      "name": "Varung",
+      "price": "1000",
+      "expDate": "10",
+      "userId": 1,
+      "id": 6
     }
   ]
 }
