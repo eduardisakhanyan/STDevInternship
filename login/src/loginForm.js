@@ -42,6 +42,7 @@ class LoginForm extends Component {
         } else {
           sessionStorage.setItem('loggeInd',token);
         }
+        value.token = token;
         delete value.rememberMe;
         fetch('http://localhost:3004/users', {
                 method: 'POST',
@@ -50,6 +51,7 @@ class LoginForm extends Component {
             })
             .then(response => response.json())
             .then(data => {
+              console.log(data);
               this.id = data.id;
             });
       }

@@ -1,6 +1,4 @@
-const initialState = [
-    {}
-];
+const initialState = [];
 
 function products(state = initialState,action) {
     switch(action.type){

@@ -1,9 +1,9 @@
 import React from 'react'
 import { Field, reduxForm } from 'redux-form'
 
-let EditAddForm = props => {
-  const { handleSubmit, buttonName } = props;
 
+let EditAddForm = props => {
+  const { handleSubmit, buttonName} = props;
   return (
     <form onSubmit={handleSubmit}>
       <div>
@@ -25,11 +25,6 @@ let EditAddForm = props => {
 
 EditAddForm = reduxForm({
   form: 'add',
-  initialValues: {
-    name: '',
-    price: '',
-    expDate: '',
-  }
 })(EditAddForm)
 
 export default EditAddForm;

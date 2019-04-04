@@ -5,13 +5,16 @@ import { connect } from 'react-redux';
 import { BrowserRouter as Switch, Route, Redirect } from "react-router-dom";
 import Home from './home';
 import Add from './add';
+import Edit from './edit';
 import { logIn, getUserByToken } from './store/actions/user';
 
 
 class App extends Component {
   componentDidMount() {
     let session = localStorage.getItem('loggedIn') || sessionStorage.getItem('loggedIn');
-    this.props.getUserByToken(session);
+    if(session) {
+      this.props.getUserByToken(session);
+    }
   }
 
   render() {
@@ -22,6 +25,7 @@ class App extends Component {
           (<LoginForm history={history} />))} />
         <Route path='/home' render={({ history }) => <Home history={history} />} />
         <Route path='/add' component={Add} />
+        <Route path='/edit' component={Edit} />
       </Switch>
     );
   }

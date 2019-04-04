@@ -7,7 +7,7 @@ export const getProductsByToken = (token) => dispatch => {
         .then(response => response.json())
         .then(user => fetch(`http://localhost:3004/products?userId=${user[0].id}`)
             .then(response => response.json())
-            .then(products => { 
+            .then(products  => {
                 return dispatch({ type: 'GET_PRODUCTS', data: products });
             })
 
