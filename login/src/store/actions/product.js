@@ -4,3 +4,5 @@ export const setProductById = (id,callback) => dispatch => {
         .then(product =>  dispatch ({ type: "SET_PRODUCT", data: product }))
         .then(()=>callback('/edit'));
 };
+
+export const clearProduct = () => ({type: "CLEAR_PRODUCT"});

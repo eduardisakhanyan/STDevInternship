@@ -1,6 +1,11 @@
-import React from 'react'
-import { Field, reduxForm } from 'redux-form'
-
+import React from 'react';
+import { Field, reduxForm } from 'redux-form';
+import RenderField from './Validations/RenderField';
+import { required,
+        stringOnly,
+        minPrice100,
+        afterCurrentDate,
+        numberOnly } from './Validations/Validators';
 
 let EditAddForm = props => {
   const { handleSubmit, buttonName} = props;
@@ -8,15 +13,30 @@ let EditAddForm = props => {
     <form onSubmit={handleSubmit}>
       <div>
         <label htmlFor="name">Name</label>
-        <Field name="name" component="input" type="text" />
+        <Field 
+        name="name" 
+        component={RenderField} 
+        type="text"
+        validate={[required, stringOnly]} 
+        />
       </div>
       <div>
         <label htmlFor="price">Price</label>
-        <Field name="price" component="input" type="text" />
+        <Field 
+        name="price" 
+        component={RenderField}
+        type="text"
+        validate={[required, numberOnly, minPrice100]} 
+        />
       </div>
       <div>
         <label htmlFor="expDate">Exp.Date</label>
-        <Field name="expDate" component="input" type="text" />
+        <Field 
+        name="expDate" 
+        component={RenderField} 
+        type="date"
+        validate={[afterCurrentDate]} 
+        />
       </div>
       <button type="submit">{buttonName}</button>
     </form>

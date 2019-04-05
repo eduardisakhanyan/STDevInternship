@@ -12,7 +12,7 @@ class LoginForm extends Component {
             .then(response => response.json())
             .then(data => {
               if(data.length === 0) {
-                this.addNewUser(value);
+                return this.addNewUser(value);
               } else {
                 if(rememberMe) {
                   localStorage.setItem('loggedIn',data[0].token);
@@ -26,7 +26,7 @@ class LoginForm extends Component {
               let newUser = {
               ...value,
               
-              "loggedId": "true",
+              "loggedIn": "true",
               }
               newUser.id = this.id;
               delete newUser.rememberMe;
@@ -40,7 +40,7 @@ class LoginForm extends Component {
         if(value.rememberMe) {
           localStorage.setItem('loggedIn',token);
         } else {
-          sessionStorage.setItem('loggeInd',token);
+          sessionStorage.setItem('loggedIn',token);
         }
         value.token = token;
         delete value.rememberMe;

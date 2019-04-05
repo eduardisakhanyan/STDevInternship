@@ -1,28 +1,45 @@
-import React from 'react'
-import { Field, reduxForm } from 'redux-form'
+import React from 'react';
+import { Field, reduxForm } from 'redux-form';
+import RenderField from './Validations/RenderField';
+import { required, minLength6, stringOnly} from './Validations/Validators';
 
 let LoginFormBody = props => {
-  const { handleSubmit } = props;
+  const { handleSubmit, submitting } = props;
 
   return (
     <form onSubmit={handleSubmit}>
       <div>
         <label htmlFor="email">E-Mail</label>
-        <Field name="email" component="input" type="email" />
+        <Field 
+        name="email" 
+        component={RenderField} 
+        type="email"
+        validate={[required]} 
+        />
       </div>
       <div>
         <label htmlFor="username">Username</label>
-        <Field name="username" component="input" type="text" />
+        <Field 
+        name="username" 
+        component={RenderField} 
+        type="text"
+        validate={[stringOnly,required]} 
+        />
       </div>
       <div>
         <label htmlFor="password">Password</label>
-        <Field name="password" component="input" type="password" />
+        <Field 
+        name="password" 
+        component={RenderField} 
+        type="password"
+        validate={[required,minLength6]} 
+        />
       </div>
       <div>
         <label htmlFor="rememberMe">Remember Me</label>
         <Field name="rememberMe" component="input" type="checkbox"/>
       </div>
-      <button type="submit">Log In</button>
+      <button type="submit" disabled={submitting}>Log In</button>
     </form>
   )
 }

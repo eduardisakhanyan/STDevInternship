@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import EditAddForm from './EditAddForm';
 import { connect } from 'react-redux';
 import { getProductsByToken } from './store/actions/products';
+import { clearProduct } from './store/actions/product';
 
 
 class Edit extends Component {
@@ -16,11 +17,12 @@ class Edit extends Component {
             headers: new Headers({ 'content-type': 'application/json' }),
             body: JSON.stringify(value)
         })
-            .then(response => response.text())
-            .then( (text) => {
-                console.log(text);
-                this.props.history.push('/home');
-            })
+        .then(response => response.text())
+        .then( (text) => {
+            console.log(text);
+            this.props.clearProduct();
+            this.props.history.push('/home');
+        })
     }
 
     getInitialValues = () => {
@@ -45,7 +47,7 @@ const mapStateToProps = state => {
     }
 }
 
-const mapDispatchToProps = { getProductsByToken };
+const mapDispatchToProps = { getProductsByToken,clearProduct };
   
   export default connect(
     mapStateToProps,

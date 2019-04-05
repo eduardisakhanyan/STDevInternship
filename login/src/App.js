@@ -7,6 +7,7 @@ import Home from './home';
 import Add from './add';
 import Edit from './edit';
 import { logIn, getUserByToken } from './store/actions/user';
+import PrivateRoute from './privateRoute';
 
 
 class App extends Component {
@@ -17,15 +18,17 @@ class App extends Component {
     }
   }
 
+
+
   render() {
     let session = localStorage.getItem('loggedIn') || sessionStorage.getItem('loggedIn');
     return (
       <Switch>
         <Route exact path='/' render={({ history }) => (session ? (<Redirect to='/home/' />) :
           (<LoginForm history={history} />))} />
-        <Route path='/home' render={({ history }) => <Home history={history} />} />
-        <Route path='/add' component={Add} />
-        <Route path='/edit' component={Edit} />
+        <PrivateRoute path='/home' component={Home} />
+        <PrivateRoute path='/add' component={Add} />
+        <PrivateRoute path='/edit' component={Edit} />
       </Switch>
     );
   }

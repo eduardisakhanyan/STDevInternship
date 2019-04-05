@@ -9,6 +9,8 @@ function products(state = initialState,action) {
             ...state,
             action.data
         ]
+        case 'CLEAR_PRODUCTS':
+        return initialState;
         default:
         return state;
     }

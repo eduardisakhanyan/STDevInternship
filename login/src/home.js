@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { getProducts, getProductsByToken } from './store/actions/products';
+import { getProducts,
+        getProductsByToken,
+        clearProducts } from './store/actions/products';
+import {clearUser} from './store/actions/user';
 import { setProductById } from './store/actions/product';
 
 class Home extends Component {
@@ -12,7 +15,9 @@ class Home extends Component {
         }
     }
 
-    logOut = () => {
+    logOut =  () => {
+        this.props.clearProducts();
+        this.props.clearUser();
         localStorage.removeItem('loggedIn');
         sessionStorage.removeItem('loggedIn');
         this.props.history.push('/');
@@ -94,6 +99,8 @@ const mapDispatchToProps = {
     getProducts,
     getProductsByToken,
     setProductById,
+    clearProducts,
+    clearUser,
 };
 
 export default connect(

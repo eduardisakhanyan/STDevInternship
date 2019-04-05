@@ -1,10 +1,4 @@
-const initialState = {
-    "email": "",
-    "username": "",
-    "password": "",
-    "loggedId": "false",
-    "id": "",
-}
+const initialState = {};
 
 function user(state = initialState,action) {
     switch(action.type) {
@@ -12,6 +6,8 @@ function user(state = initialState,action) {
             return action.data;
         case 'LOAD_USER':
             return action.data;
+        case 'CLEAR_USER':
+            return initialState;
         default:
             return state;
     }

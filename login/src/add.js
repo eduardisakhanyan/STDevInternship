@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import EditAddForm from './EditAddForm';
 import { connect } from 'react-redux';
 import { addProduct } from './store/actions/products'
@@ -6,7 +6,7 @@ import { addProduct } from './store/actions/products'
 
 class Add extends Component {
     submit = (value) => {
-        value.userId = this.props.user[0].id.toString();
+        value.userId = this.props.user[0].id;
         let id = value.userId;
         fetch('http://localhost:3004/products', {
             method: 'POST',
@@ -15,38 +15,30 @@ class Add extends Component {
         })
             .then(response => response.json())
             .then(product => {
-                product.userId = id.toString();
+                product.userId = id;
                 delete product.id;
-                return this.props.addProduct(product);
+                console.log(product);
+                return addProduct(product);
             })
-            .then(() => {
+            .then( () => {
                 this.props.history.push('/home');
             })
     }
 
-    getInitialValues = () => {
-        return {
-            name: '',
-            price: '',
-            expDate: '',
-        };
-    }
-
-    render() {
+    render () {
         return (
-            <EditAddForm onSubmit={this.submit} buttonName='Add' initialValues={this.getInitialValues()} />
+            <EditAddForm onSubmit={this.submit} buttonName='Add' />
         )
     }
 }
 
 const mapStateToProps = state => {
-    return {
-        user: state.user,
+    return {    
+      user: state.user,
     }
-}
-
-const mapDispatchToProps = { addProduct };
-export default connect(
+  }
+  
+  export default connect(
     mapStateToProps,
-    mapDispatchToProps
-)(Add);
+    null
+    )(Add);

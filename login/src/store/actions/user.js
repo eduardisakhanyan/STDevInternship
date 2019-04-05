@@ -7,3 +7,5 @@ export const getUserByToken = (token) => dispatch => {
           .then(response => response.json())
           .then(user => dispatch({type: 'LOG_IN',data: user}));
 }
+
+export const clearUser = () => ({type: 'CLEAR_USER'});
