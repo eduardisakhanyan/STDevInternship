@@ -1,21 +1,17 @@
 import React, { Component } from 'react';
 import './App.css';
-import LoginForm from './loginForm';
+import LoginForm from './components/loginForm';
 import { connect } from 'react-redux';
 import { BrowserRouter as Switch, Route, Redirect } from "react-router-dom";
-import Home from './home';
-import Add from './add';
-import Edit from './edit';
+import Home from './components/home';
+import Add from './components/add';
+import Edit from './components/edit';
 import { logIn, getUserByToken } from './store/actions/user';
 import PrivateRoute from './privateRoute';
 
 
 class App extends Component {
   componentDidMount() {
-    let session = localStorage.getItem('loggedIn') || sessionStorage.getItem('loggedIn');
-    if(session) {
-      this.props.getUserByToken(session);
-    }
   }
 
 

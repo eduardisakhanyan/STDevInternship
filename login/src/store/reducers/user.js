@@ -8,6 +8,11 @@ function user(state = initialState,action) {
             return action.data;
         case 'CLEAR_USER':
             return initialState;
+        case 'UPDATE_USER':
+            return {
+                ...state,
+                totalProducts: action.data,
+            }
         default:
             return state;
     }

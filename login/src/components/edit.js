@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import EditAddForm from './EditAddForm';
+import EditAddForm from '../forms/EditAddForm';
 import { connect } from 'react-redux';
-import { getProductsByToken } from './store/actions/products';
-import { clearProduct } from './store/actions/product';
+import { getProductsByToken } from '../store/actions/products';
+import { clearProduct } from '../store/actions/product';
 
 
 class Edit extends Component {

@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import LoginFormBody from './loginFormBody';
-import { logIn } from './store/actions/user';
+import LoginFormBody from '../forms/loginFormBody';
+import { logIn } from '../store/actions/user';
 import { connect } from 'react-redux';
 
 
 class LoginForm extends Component {
     id = null;
+    totalProducts = null;
     submit = (value) => {
         let { email, username, password, rememberMe} = value;
         fetch(`http://localhost:3004/users?email=${email}&username=${username}&password=${password}`)
@@ -19,16 +20,17 @@ class LoginForm extends Component {
                 } else {
                   sessionStorage.setItem('loggedIn',data[0].token);
                 }
-                this.id = data[0].id;
+                return data[0];
               }  
             })
-            .then(() => {
+            .then((data) => {
               let newUser = {
               ...value,
               
               "loggedIn": "true",
               }
-              newUser.id = this.id;
+              newUser.id = data.id;
+              newUser.totalProducts = data.totalProducts;
               delete newUser.rememberMe;
               this.props.logIn(newUser);
               this.props.history.push('/home');
@@ -43,16 +45,18 @@ class LoginForm extends Component {
           sessionStorage.setItem('loggedIn',token);
         }
         value.token = token;
+        value.totalProducts = 0;
         delete value.rememberMe;
-        fetch('http://localhost:3004/users', {
+        return fetch('http://localhost:3004/users', {
                 method: 'POST',
                 headers: new Headers({ 'content-type': 'application/json' }),
                 body: JSON.stringify(value),
             })
             .then(response => response.json())
             .then(data => {
-              console.log(data);
               this.id = data.id;
+              this.totalProducts = data.totalProducts;
+              return data;
             });
       }
       render () {

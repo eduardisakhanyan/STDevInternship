@@ -1,11 +1,11 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
-import RenderField from './Validations/RenderField';
+import RenderField from '../Validations/RenderField';
 import { required,
         stringOnly,
         minPrice100,
         afterCurrentDate,
-        numberOnly } from './Validations/Validators';
+        numberOnly } from '../Validations/Validators';
 
 let EditAddForm = props => {
   const { handleSubmit, buttonName} = props;

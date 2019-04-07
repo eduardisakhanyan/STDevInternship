@@ -5,65 +5,33 @@
       "username": "siruns",
       "password": "123456",
       "token": "169e9cf635f",
+      "totalProducts": 0,
       "id": 1
     },
     {
       "email": "ebarvSirun@gmail.com",
       "username": "siruns",
-      "password": "1234565",
-      "token": "169ed31ff29",
+      "password": "12345685",
+      "token": "169f83badc9",
+      "totalProducts": 0,
       "id": 2
     },
     {
       "email": "ebarvSirun@gmail.com",
-      "username": "siruns",
-      "password": "1234567",
-      "token": "169ed33353d",
+      "username": "sirunse",
+      "password": "123456",
+      "token": "169f847dc9f",
+      "totalProducts": 1,
       "id": 3
-    },
-    {
-      "email": "ebarvSirun@gmail.com",
-      "username": "siruns",
-      "password": "123456747",
-      "token": "169ed38c41a",
-      "id": 4
-    },
-    {
-      "email": "ebarvSirun@gmail.com",
-      "username": "siruns",
-      "password": "123456646546545",
-      "token": "169ed3b2c4a",
-      "id": 5
-    },
-    {
-      "email": "ebarvSirun@gmail.com",
-      "username": "siruns",
-      "password": "123456454",
-      "token": "169ed4cb802",
-      "id": 6
-    },
-    {
-      "email": "ebarvSirun@gmail.com",
-      "username": "siruns",
-      "password": "12345685",
-      "token": "169ed5150e6",
-      "id": 7
     }
   ],
   "products": [
     {
-      "name": "Emish",
-      "price": "152",
-      "expDate": "2019-07-05",
-      "userId": "1",
-      "id": 2
-    },
-    {
-      "name": "Varung",
-      "price": "125",
-      "expDate": "2019-05-05",
-      "userId": 1,
-      "id": 3
+      "name": "dzmeruk",
+      "price": "1000",
+      "expDate": "2019-04-19",
+      "userId": 3,
+      "id": 1
     }
   ]
 }
