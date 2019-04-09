@@ -8,14 +8,6 @@ import { updateArray } from '../../store/actions/cardsPositions';
 class Main extends Component {
 
    onDragEnd = (response) => {
-    // combine: null
-    // destination: {droppableId: 2, index: 1}
-    // draggableId: 1
-    // mode: "FLUID"
-    // reason: "DROP"
-    // source: {index: 0, droppableId: 1}
-    // type: "DEFAULT"
-    console.log(response);
     if(!response.destination){
       return;
     }
@@ -26,7 +18,6 @@ class Main extends Component {
       response.source.droppableId,
       response.destination.droppableId
     )
-    return;
    }
 
   render() {

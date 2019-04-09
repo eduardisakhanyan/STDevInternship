@@ -2,14 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import NewItemForm from '../Forms/newItemForm';
 import { addNewCard } from '../../store/actions/cards';
-import { getCardsPositions } from '../../store/actions/cardsPositions';
 import { Draggable } from 'react-beautiful-dnd';
 
 class List extends Component {
-  componentDidMount() {
-    this.props.getCardsPositions();
-  }
-
   state = {
     addingCard: false,
   }
@@ -41,7 +36,7 @@ class List extends Component {
           <h3 className="list-title">{this.props.currentList.name}</h3>
           <ul className="list-items">
             {listPosition.positionsArray.map((cardId, index) => (
-              <Draggable draggableId={cardId} index={index}>
+              <Draggable draggableId={`drug-${this.props.currentList.id}-${index}`} index={index}>
                 {(provided, snapshot) => (
                   <div
                     ref={provided.innerRef}
@@ -78,7 +73,6 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = {
   addNewCard,
-  getCardsPositions
 };
 
 export default connect(

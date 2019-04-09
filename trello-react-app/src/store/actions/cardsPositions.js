@@ -13,7 +13,7 @@ export const updateArray = (
   destination,
   sourceListId,
   destinationListId
-) => async (dispatch) => {
+) =>  (dispatch) => {
   console.log(array,sourse,destination,sourceListId,destinationListId);
   if (sourceListId === destinationListId) {
     const [removed] = array.splice(sourse, 1);
@@ -29,6 +29,6 @@ export const updateArray = (
       body: JSON.stringify(value)
     })
     .then(response => response.json())
-    .then(data => dispatch({type:UPDATE_CARDS_POSITIONS, data:data}))
+    return dispatch({type:UPDATE_CARDS_POSITIONS, data:value});
   }
 }

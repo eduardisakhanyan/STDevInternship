@@ -1,20 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import List from './list';
-import { getCards } from '../../store/actions/cards';
 import { Droppable } from 'react-beautiful-dnd';
 
 class Lists extends Component {
-
-  componentDidMount() {
-    this.props.getCards();
-
-  }
-
   render() {
     return (
       this.props.lists.map((list, index) =>
-        <Droppable droppableId={index+1}>
+        <Droppable droppableId={list.id}>
           {(provided, snapshot) => (
             <div
               {...provided.droppableProps}
@@ -37,7 +30,6 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = {
-  getCards,
 };
 
 export default connect(
