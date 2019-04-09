@@ -2,7 +2,7 @@ import { GET_CARDS, UPDATE_CARDS } from '../actions/cards';
 
 const initialState = [];
 
-function lists(state = initialState,action) {
+function cards(state = initialState,action) {
     switch(action.type){
         case GET_CARDS:
         return action.data;
@@ -16,4 +16,4 @@ function lists(state = initialState,action) {
     }
 }
 
-export default lists;
+export default cards;

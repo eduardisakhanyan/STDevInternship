@@ -2,9 +2,14 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import NewItemForm from '../Forms/newItemForm';
 import { addNewCard } from '../../store/actions/cards';
+import { getCardsPositions } from '../../store/actions/cardsPositions';
 import { Draggable } from 'react-beautiful-dnd';
 
 class List extends Component {
+  componentDidMount() {
+    this.props.getCardsPositions();
+  }
+
   state = {
     addingCard: false,
   }
@@ -24,13 +29,19 @@ class List extends Component {
   }
 
   render() {
+    const listPosition = this.props.positions.find((item) => {
+      return item.listId === this.props.currentList.id;
+    });
+    const listCards = this.props.cards.filter((card) => {
+      return card.listId === this.props.currentList.id;
+    });
     return (
-      <div className="list">
-        <h3 className="list-title">{this.props.currentList.title}</h3>
-        <ul className="list-items">
-          {this.props.cards.filter(card => card.listId === this.props.currentList.id)
-            .map((listCards, index) =>
-              <Draggable key={listCards.id} draggableId={listCards.id} index={index + 1}>
+      (this.props.positions.length !== 0 && this.props.cards.length !== 0) && (
+        <div className="list">
+          <h3 className="list-title">{this.props.currentList.name}</h3>
+          <ul className="list-items">
+            {listPosition.positionsArray.map((cardId, index) => (
+              <Draggable draggableId={cardId} index={index}>
                 {(provided, snapshot) => (
                   <div
                     ref={provided.innerRef}
@@ -38,33 +49,51 @@ class List extends Component {
                     {...provided.dragHandleProps}
                   >
                     <li key={index}>
-                      {listCards.label}
+                      {listCards.find((card) => {
+                        return card.id === cardId;
+                      }).name}
                     </li>
                   </div>
                 )}
               </Draggable>
-            )
+            ))
+            }
+          </ul>
+          {this.state.addingCard
+            ? (<NewItemForm onSubmit={(value) => this.handleSubmit(value, this.props.currentList.id)}
+            />)
+            : (<button class="add-card-btn btn" onClick={this.handleClick}>Add a card</button>)
           }
-        </ul>
-        {this.state.addingCard
-          ? (<NewItemForm onSubmit={(value) => this.handleSubmit(value, this.props.currentList.id)}
-            fieldName="label" />)
-          : (<button class="add-card-btn btn" onClick={this.handleClick}>Add a card</button>)
-        }
-      </div>
-    );
+        </div>)
+    )
   }
 }
 
 const mapStateToProps = state => {
   return {
     cards: state.cards,
+    positions: state.cardsPositions,
   }
 }
 
-const mapDispatchToProps = { addNewCard };
+const mapDispatchToProps = {
+  addNewCard,
+  getCardsPositions
+};
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
 )(List);
+
+//<Draggable draggableId={index + 1} index={index + 1}>
+              //   {(provided, snapshot) => (
+              //     <div
+              //       ref={provided.innerRef}
+              //       {...provided.draggableProps}
+              //       {...provided.dragHandleProps}
+              //     >
+
+              //     </div>
+              //   )}
+              // </Draggable>

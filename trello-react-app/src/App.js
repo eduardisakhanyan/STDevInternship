@@ -8,11 +8,13 @@ import { getCards } from './store/actions/cards';
 
 
 
+
 class App extends Component {
 
   componentDidMount() {
     this.props.getLists();
-    this.props.getCards();
+    
+    
   }
 
   render() {
@@ -26,7 +28,10 @@ class App extends Component {
   }
 }
 
-const mapDispatchToProps = { getLists, getCards };
+const mapDispatchToProps = { 
+  getLists, 
+  getCards, 
+};
 
 export default connect(
   null,

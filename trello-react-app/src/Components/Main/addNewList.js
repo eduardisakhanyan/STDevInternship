@@ -24,7 +24,7 @@ class AddNewList extends Component {
   render(){
     return (
       this.state.addingList
-      ?(<NewItemForm onSubmit={this.handleSubmit} fieldName="title"/>)
+      ?(<NewItemForm onSubmit={this.handleSubmit} />)
       :(<button className="add-card-btn btn" onClick={this.handleClick}>Add a card</button>)
     );
   }

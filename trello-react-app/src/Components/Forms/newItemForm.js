@@ -2,12 +2,12 @@ import React from 'react'
 import { Field, reduxForm } from 'redux-form'
 
 let NewItemForm = props => {
-  const { handleSubmit, fieldName } = props;
+  const { handleSubmit} = props;
   return (
     <form onSubmit={handleSubmit}>
       <div>
         <label htmlFor="title">Title</label>
-        <Field name={fieldName} component="input" type="text" />
+        <Field name="name" component="input" type="text" />
       </div>
       <button type="submit">Submit</button>
     </form>
