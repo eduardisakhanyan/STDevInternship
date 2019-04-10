@@ -3,7 +3,7 @@ import { reducer as formReducer } from 'redux-form';
 
 import lists from './lists';
 import cards from './cards';
-import cardsPositions from './cardsPositions';
+import cardsPositions from './products';
 
 const rootReducer = combineReducers({
   lists,

@@ -7,10 +7,8 @@ function lists(state = initialState,action) {
         case GET_LISTS:
         return action.data;
         case UPDATE_LISTS:
-        return [
-          ...state,
-          action.data
-        ];
+        return [...state,
+        action.data];
         default:
         return state;
     }

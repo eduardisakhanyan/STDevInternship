@@ -2,14 +2,20 @@ import React, { Component } from 'react';
 import NewItemForm from '../Forms/newItemForm';
 import { connect } from 'react-redux';
 import { addNewList } from '../../store/actions/lists';
+import { addNewProductsList } from '../../store/actions/products';
 
 class AddNewList extends Component {
   state = {
     addingList: false,
   }
 
-  handleSubmit = (value) => {
-    this.props.addNewList(value);
+  handleSubmit = async (value) => {
+   
+    await this.props.addNewList(value);
+    const listId = this.props.lists[this.props.lists.length - 1].id + 1;
+    //.then(()=> listId = this.props.lists[this.props.lists.length - 1].id);
+    console.log(listId);
+    await this.props.addNewProductsList(listId);
     this.setState({
       addingList: false,
     })
@@ -30,9 +36,18 @@ class AddNewList extends Component {
   }
 }
 
-const mapDispatchToProps = { addNewList };
+const mapStateToProps = state => {
+  return {
+    lists: state.lists,
+  }
+}
+
+const mapDispatchToProps = { 
+  addNewList,
+  addNewProductsList 
+};
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps,
   )(AddNewList);

@@ -5,7 +5,7 @@ import Main from './Components/Main';
 import { connect } from 'react-redux';
 import { getLists } from './store/actions/lists';
 import { getCards } from './store/actions/cards';
-import { getCardsPositions } from './store/actions/cardsPositions';
+import { getCardsPositions } from './store/actions/products';
 
 
 

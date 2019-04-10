@@ -1,4 +1,4 @@
-import { GET_CARDS, UPDATE_CARDS } from '../actions/cards';
+import { GET_CARDS, ADD_CARD, UPDATE_CARDS } from '../actions/cards';
 
 const initialState = [];
 
@@ -6,11 +6,19 @@ function cards(state = initialState,action) {
     switch(action.type){
         case GET_CARDS:
         return action.data;
-        case UPDATE_CARDS:
+        case ADD_CARD:
         return [
           ...state,
           action.data,
         ]
+        case UPDATE_CARDS:
+        return state.map(item => {
+          if(item.id === action.data.id )
+          {
+            return action.data;
+          }
+          return item;
+        })
         default:
         return state;
     }

@@ -14,5 +14,5 @@ export const addNewList = (value) => dispatch => {
     body: JSON.stringify(value)
   })
   .then((response) => response.json())
-  .then((list) => {console.log(list); return dispatch({type: UPDATE_LISTS, data: list})} );
+  .then((value) => {console.log(value); return dispatch({type: UPDATE_LISTS, data: value})})
 }

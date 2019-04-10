@@ -1,10 +1,14 @@
+export const UPDATE_CARDS = 'UPDATE_CARDS'
 export const GET_CARDS = 'GET_CARDS';
-export const UPDATE_CARDS = 'UPDATE_CARDS';
+export const ADD_CARD = 'ADD_CARD';
 
 export const getCards = () => dispatch => {
   fetch('http://localhost:3004/cards')
     .then(responce => responce.json())
-    .then(product =>  dispatch ({ type: GET_CARDS, data: product }));
+    .then(product => {
+      console.log(product);
+      return dispatch({ type: GET_CARDS, data: product })
+    })
 }
 
 export const addNewCard = (value) => dispatch => {
@@ -14,5 +18,6 @@ export const addNewCard = (value) => dispatch => {
     body: JSON.stringify(value)
   })
   .then((response) => response.json())
-  .then((card) => {console.log(card); return dispatch({type: UPDATE_CARDS, data: card})} );
+  .then((card) => {console.log(card); return dispatch({type: ADD_CARD, data: card})} );
 }
+
