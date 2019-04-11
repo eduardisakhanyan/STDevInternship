@@ -12,13 +12,15 @@ function cards(state = initialState,action) {
           action.data,
         ]
         case UPDATE_CARDS:
-        return state.map(item => {
+        const update = state.map(item => {
           if(item.id === action.data.id )
           {
             return action.data;
           }
           return item;
         })
+        console.log(update);
+        return update;
         default:
         return state;
     }

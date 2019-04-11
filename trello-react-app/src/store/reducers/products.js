@@ -13,6 +13,7 @@ function cardsPositions(state = initialState,action) {
           }
           return item;
         });
+        console.log(newState);
         return newState;
         case ADD_NEW_ARRAY:
         return [

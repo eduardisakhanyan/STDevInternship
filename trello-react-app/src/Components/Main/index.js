@@ -2,23 +2,25 @@ import React, { Component } from 'react';
 import Lists from './lists';
 import { connect } from 'react-redux';
 import AddNewList from './addNewList';
-import { DragDropContext } from 'react-beautiful-dnd';
+import { DragDropContext, Droppable } from 'react-beautiful-dnd'
 import { updateArray } from '../../store/actions/products';
+import { updateListOrder } from '../../store/actions/listOrder';
 
 class Main extends Component {
-
-   onDragEnd = (response) => {
-    // combine: null
-    // destination: {droppableId: 1, index: 1}
-    // draggableId: "drag-1-0"
-    // mode: "FLUID"
-    // reason: "DROP"
-    // source: {index: 0, droppableId: 1}
-    // type: "DEFAULT"
-    if(!response.destination){
+  onDragEnd = (response) => {
+    if(response.destination === null) {
       return;
     }
-    this.props.updateArray(
+    if (response.type === 'listDrop') {
+      this.props.updateListOrder(
+        this.props.listOrder.listPositions,
+        response.source.index,
+        response.destination.index
+      );
+    }
+    if (response.type === 'cardDrop') {
+      console.log(response);
+      this.props.updateArray(
       this.props.positions[response.source.droppableId - 1].positionsArray,
       this.props.positions[response.destination.droppableId -1].positionsArray,
       response.source.index,
@@ -26,15 +28,31 @@ class Main extends Component {
       response.source.droppableId,
       response.destination.droppableId
     )
-   }
+    }   
+    return;
+  }
 
   render() {
     return (
       <DragDropContext onDragEnd={this.onDragEnd}>
-        <section className="lists-container">
-          <Lists />
-          <AddNewList />
-        </section>
+        <Droppable 
+          droppableId="ListDroppable"
+          direction="horizontal"
+          type="listDrop"
+        >
+        {provided => (
+                 
+          <section 
+            className="lists-container"
+            {...provided.droppableProps}
+            ref={provided.innerRef}
+          >
+            <Lists />
+            {provided.placeholder}
+            <AddNewList />
+          </section>
+        )}
+        </Droppable>
       </DragDropContext>
     );
   }
@@ -43,12 +61,14 @@ class Main extends Component {
 const mapStateToProps = state => {
   return {
     lists: state.lists,
+    listOrder: state.listOrder,
     positions: state.cardsPositions,
   }
 }
 
 const mapDispatchToProps = {
   updateArray,
+  updateListOrder
 };
 
 export default connect(

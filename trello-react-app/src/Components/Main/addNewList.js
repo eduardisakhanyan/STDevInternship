@@ -1,21 +1,17 @@
 import React, { Component } from 'react';
 import NewItemForm from '../Forms/newItemForm';
 import { connect } from 'react-redux';
-import { addNewList } from '../../store/actions/lists';
-import { addNewProductsList } from '../../store/actions/products';
+//import { addNewList } from '../../store/actions/lists';
+//import { addNewProductsList } from '../../store/actions/products';
+import { updateData } from '../../store/actions/data';
 
 class AddNewList extends Component {
   state = {
     addingList: false,
   }
 
-  handleSubmit = async (value) => {
-   
-    await this.props.addNewList(value);
-    const listId = this.props.lists[this.props.lists.length - 1].id + 1;
-    //.then(()=> listId = this.props.lists[this.props.lists.length - 1].id);
-    console.log(listId);
-    await this.props.addNewProductsList(listId);
+  handleSubmit = (value) => {
+    this.props.updateData(value,'LIST');
     this.setState({
       addingList: false,
     })
@@ -42,9 +38,8 @@ const mapStateToProps = state => {
   }
 }
 
-const mapDispatchToProps = { 
-  addNewList,
-  addNewProductsList 
+const mapDispatchToProps = {
+  updateData 
 };
 
 export default connect(

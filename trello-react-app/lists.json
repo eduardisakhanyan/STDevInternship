@@ -12,7 +12,7 @@
     },
     {
       "id": 3,
-      "listId": 1,
+      "listId": 2,
       "name": "Update personal website header background image"
     },
     {
@@ -22,17 +22,17 @@
     },
     {
       "id": 5,
-      "listId": 2,
+      "listId": 3,
       "name": "Add google map to personal website"
     },
     {
       "id": 6,
-      "listId": 3,
+      "listId": 5,
       "name": "Begin draft of CSS Grid article"
     },
     {
       "id": 7,
-      "listId": 1,
+      "listId": 2,
       "name": "Read new CSS-Tricks articles"
     },
     {
@@ -42,12 +42,12 @@
     },
     {
       "id": 9,
-      "listId": 1,
+      "listId": 3,
       "name": "Read other bookmarked articles"
     },
     {
       "id": 10,
-      "listId": 1,
+      "listId": 2,
       "name": "Look through portfolios to gather inspiration"
     },
     {
@@ -56,17 +56,18 @@
       "name": "Create something cool for CodePen"
     },
     {
-      "id": 12,
-      "listId": 1,
-      "name": "Post latest CodePen work on Twitter"
+      "name": "CodePen work on Twitter",
+      "description": "",
+      "listId": 2,
+      "id": 12
     },
     {
       "id": 13,
-      "listId": 1,
+      "listId": 2,
       "name": "Listen to new Syntax.fm episode"
     },
     {
-      "listId": 2,
+      "listId": 1,
       "name": "Barlus tigin arus",
       "id": 14
     },
@@ -82,7 +83,7 @@
     },
     {
       "id": 17,
-      "listId": 2,
+      "listId": 3,
       "name": "Begin work on mock-up for client website"
     },
     {
@@ -127,7 +128,7 @@
     },
     {
       "id": 26,
-      "listId": 3,
+      "listId": 1,
       "name": "CSS Methodologies (BEM, SMACSS etc."
     },
     {
@@ -407,7 +408,7 @@
     },
     {
       "id": 82,
-      "listId": 6,
+      "listId": 9,
       "name": "Adam Khoury"
     },
     {
@@ -447,7 +448,7 @@
     },
     {
       "id": 90,
-      "listId": 6,
+      "listId": 3,
       "name": "Layout Land (Jen Simmons)"
     },
     {
@@ -652,7 +653,7 @@
     },
     {
       "id": 131,
-      "listId": 8,
+      "listId": 9,
       "name": "Geolocation (Find places near you etc."
     },
     {
@@ -667,7 +668,7 @@
     },
     {
       "id": 134,
-      "listId": 9,
+      "listId": 8,
       "name": "Random Name Picker"
     },
     {
@@ -699,6 +700,16 @@
       "id": 140,
       "listId": 9,
       "name": "Unit Converter"
+    },
+    {
+      "name": "Varung",
+      "listId": 2,
+      "id": 141
+    },
+    {
+      "name": "Varung",
+      "listId": 1,
+      "id": 142
     }
   ],
   "lists": [
@@ -737,33 +748,26 @@
     {
       "id": 9,
       "name": "JavaScript Project Ideas"
-    },
-    {
-      "name": "Varung",
-      "id": 10
     }
   ],
   "positions": [
     {
       "listId": 1,
       "positionsArray": [
-        1,
-        13,
-        7,
-        9,
+        14,
+        15,
         8,
-        12
+        10,
+        142
       ],
       "id": 1
     },
     {
       "listId": 2,
       "positionsArray": [
-        10,
+        12,
         3,
-        5,
-        15,
-        14,
+        1,
         17
       ],
       "id": 2
@@ -773,6 +777,7 @@
       "positionsArray": [
         6,
         2,
+        9,
         26,
         11,
         20,
@@ -855,15 +860,13 @@
     {
       "listId": 6,
       "positionsArray": [
-        82,
         84,
         85,
         86,
-        87,
         88,
+        87,
         83,
         89,
-        90,
         91,
         92,
         93,
@@ -878,21 +881,20 @@
     {
       "listId": 7,
       "positionsArray": [
+        106,
         99,
         101,
         103,
         100,
         102,
         104,
-        105,
-        106
+        105
       ],
       "id": 7
     },
     {
       "listId": 8,
       "positionsArray": [
-        131,
         110,
         107,
         108,
@@ -921,10 +923,10 @@
         126,
         127,
         129,
+        82,
         130,
         132,
         133,
-        134,
         128,
         136,
         135,
@@ -934,11 +936,19 @@
         140
       ],
       "id": 9
-    },
-    {
-      "listId": 10,
-      "positionsArray": [],
-      "id": 10
     }
-  ]
+  ],
+  "listOrder": {
+    "listPositions": [
+      3,
+      2,
+      1,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  }
 }

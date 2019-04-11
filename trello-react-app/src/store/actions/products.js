@@ -5,10 +5,10 @@ export const GET_CARDS_POSITIONS = 'GET_CARDS_POSITIONS';
 export const UPDATE_CARDS_POSITIONS = 'UPDATE_CARDS_POSITIONS';
 export const ADD_NEW_ARRAY = 'ADD_NEW_ARRAY';
 
-export const getCardsPositions = () => dispatch => {
-  fetch('http://localhost:3004/positions')
-    .then(responce => responce.json())
-    .then(product => dispatch({ type: GET_CARDS_POSITIONS, data: product }));
+export const getCardsPositions = async () => {
+  const positons = await fetch('http://localhost:3004/positions')
+    .then(responce => responce.json());
+  return positons;
 }
 
 export const updateArray =  (
@@ -22,7 +22,6 @@ export const updateArray =  (
   if (sourceListId === destinationListId) {
     const [removed] = destinationArray.splice(source, 1);
     destinationArray.splice(destination, 0, removed);
-    console.log(destinationArray);
     const value = {
       "listId": sourceListId,
       "positionsArray": destinationArray,
@@ -78,12 +77,6 @@ export const updateArray =  (
     })
     .then(response => response.json())
     .then(data => console.log(data));
-    // dispatch({ type:UPDATE_CARDS_POSITIONS, 
-    //   data: {
-    //   ...sourceObjectData,
-    //   id: sourceListId
-    //   } 
-    // });
     destinationArray.splice(destination,0,replaced);
     fetch(`http://localhost:3004/positions/${destinationListId}`, {
       method: 'PUT',
@@ -92,33 +85,26 @@ export const updateArray =  (
     })
     .then(response => response.json())
     .then(data => console.log(data));
-    // dispatch({ type:UPDATE_CARDS_POSITIONS, 
-    //   data: {
-    //   ...destinationObjectData,
-    //   id: destinationListId
-    //   } 
-    // });
   }
 }
 
-export const addNewProductsList = (listId) => async dispatch => {
+export const addNewProductsList = async (listId) => {
   const newArray = await fetch('http://localhost:3004/positions', {
     method: 'POST',
     headers: new Headers({ 'content-type': 'application/json' }),
     body: JSON.stringify({
       "listId": listId,
-      "positionsArray": []
+      "positionsArray": [ ]
     })
   })
   .then(response => response.json());
-  return dispatch({type: ADD_NEW_ARRAY, data: newArray});
+  return newArray;
 }
 
-export const addCardInPositions = (id,cardId) => async dispatch => {
+export const addCardInPositions = async (id,cardId) => {
   const cards = await fetch(`http://localhost:3004/positions?listId=${id}`)
   .then(response => response.json());
-  console.log(cards);
-  const value = await fetch(`http://localhost:3004/positions/${id}`, {
+  const updatedArray = await fetch(`http://localhost:3004/positions/${id}`, {
       method: 'PUT',
       headers: new Headers({ 'content-type': 'application/json' }),
       body: JSON.stringify({
@@ -129,6 +115,7 @@ export const addCardInPositions = (id,cardId) => async dispatch => {
         ]
       })
     })
-    .then(response => response.json())
-    return dispatch({type:UPDATE_CARDS_POSITIONS, data:value});
+    .then(response => response.json());
+  return updatedArray;
+    
 }

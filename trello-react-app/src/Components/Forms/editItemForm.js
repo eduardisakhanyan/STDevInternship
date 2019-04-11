@@ -1,7 +1,7 @@
 import React from 'react'
 import { Field, reduxForm } from 'redux-form'
 
-let NewItemForm = props => {
+let EditItemForm = props => {
   const { handleSubmit} = props;
   return (
     <form onSubmit={handleSubmit}>
@@ -9,13 +9,17 @@ let NewItemForm = props => {
         <label htmlFor="title">Title</label>
         <Field name="name" component="input" type="text" />
       </div>
+      <div>
+        <label htmlFor="title">Description</label>
+        <Field name="description" component="textarea" type="text" />
+      </div>
       <button type="submit">Submit</button>
     </form>
   );
 }
 
-NewItemForm = reduxForm({
-  form: 'newItem'
-})(NewItemForm);
+EditItemForm = reduxForm({
+  form: 'editItem'
+})(EditItemForm);
 
-export default NewItemForm;
+export default EditItemForm;

@@ -1,23 +1,23 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import List from './list';
-import { Droppable } from 'react-beautiful-dnd';
+
 
 class Lists extends Component {
+ 
+
   render() {
     return (
-      this.props.lists.map((list, index) =>
-        <Droppable droppableId={list.id}>
-          {(provided, snapshot) => (
-            <div
-              {...provided.droppableProps}
-              ref={provided.innerRef}
-            >
-              <List currentList={list} key={index} />
-              {provided.placeholder}
-            </div>
-          )}
-        </Droppable>
+      (this.props.listOrder.length !==0) &&
+      this.props.listOrder.listPositions.map((order, index) =>
+      {
+        const current = this.props.lists.find((item) => item.id === order);
+        return <List
+        currentList={current} 
+        key={index}
+        uniqueKey={index + 1}
+        />
+      }
       )
     );
   }
@@ -26,6 +26,8 @@ class Lists extends Component {
 const mapStateToProps = state => {
   return {
     lists: state.lists,
+    positions: state.cardsPositions,
+    listOrder: state.listOrder,
   }
 }
 
