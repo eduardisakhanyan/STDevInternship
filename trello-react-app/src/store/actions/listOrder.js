@@ -4,7 +4,7 @@ export const ADD_LIST_ORDER = 'ADD_LIST_ORDER';
 
 export const getListOrder = async () => {
   const listOrder = await fetch('http://localhost:3004/listOrder')
-    .then(responce => responce.json());
+    .then(response => response.json());
   return listOrder;
 }
 
