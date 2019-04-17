@@ -14,10 +14,10 @@ export const getData = () => async dispatch => {
   const listOrder = await getListOrder();
   console.log(listOrder);
   return dispatch(batchActions([
-    {type:GET_LISTS, data: lists},
-    {type:GET_CARDS, data: cards},
-    {type:GET_CARDS_POSITIONS, data: positions},
-    {type:GET_LIST_ORDER, data: listOrder}
+      {type:GET_LISTS, data: lists},
+      {type:GET_CARDS, data: cards},
+      {type:GET_CARDS_POSITIONS, data: positions},
+      {type:GET_LIST_ORDER, data: listOrder}
     ])
   );
 }
@@ -34,9 +34,9 @@ export const updateData = (value,reason) => async dispatch => {
       newListOrder.listPositions.push(newList.id);
       addInOrder(newListOrder);
       return dispatch(batchActions([
-        {type:UPDATE_LISTS, data: newList},
-        {type:ADD_NEW_ARRAY, data: newArrayOfCards},
-        {type:ADD_LIST_ORDER, data: newListOrder}
+          {type:UPDATE_LISTS, data: newList},
+          {type:ADD_NEW_ARRAY, data: newArrayOfCards},
+          {type:ADD_LIST_ORDER, data: newListOrder}
         ])
       );  
     }
@@ -47,8 +47,8 @@ export const updateData = (value,reason) => async dispatch => {
       const updatedArrayOfCards = await addCardInPositions(newCard.listId,newCard.id)
       console.log(updatedArrayOfCards);
       return dispatch(batchActions([
-        {type:ADD_CARD, data: newCard},
-        {type:UPDATE_CARDS_POSITIONS, data: updatedArrayOfCards},
+          {type:ADD_CARD, data: newCard},
+          {type:UPDATE_CARDS_POSITIONS, data: updatedArrayOfCards},
         ])
       );  
     }

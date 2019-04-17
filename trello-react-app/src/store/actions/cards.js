@@ -32,3 +32,14 @@ export const updateCard = (value,oldCard) => async dispatch => {
   .then(response => response.json())
   return dispatch({type: UPDATE_CARDS,data: updatedCard});
 }
+
+export const getFilteredCards = (value) => async dispatch => {
+  let filteredCards = '';
+  if(value.search === undefined) {
+    filteredCards = await getCards();
+  } else {
+    filteredCards = await fetch(`http://localhost:3004/cards?name_like=${value.search}`)
+    .then(responce => responce.json())
+  }
+  return dispatch({type: GET_CARDS,data: filteredCards});
+}

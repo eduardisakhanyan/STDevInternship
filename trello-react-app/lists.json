@@ -26,9 +26,10 @@
       "name": "Add google map to personal website"
     },
     {
-      "id": 6,
-      "listId": 5,
-      "name": "Begin draft of CSS Grid article"
+      "name": "Begin draft of CSS Grid article",
+      "description": "",
+      "listId": 3,
+      "id": 6
     },
     {
       "id": 7,
@@ -51,9 +52,10 @@
       "name": "Look through portfolios to gather inspiration"
     },
     {
-      "id": 11,
+      "name": "Create something cool for CodePen",
+      "description": "",
       "listId": 3,
-      "name": "Create something cool for CodePen"
+      "id": 11
     },
     {
       "name": "CodePen work on Twitter",
@@ -122,9 +124,10 @@
       "name": "CSS Flexbox"
     },
     {
-      "id": 25,
+      "name": "CSS Grid",
+      "description": "",
       "listId": 3,
-      "name": "CSS Grid"
+      "id": 25
     },
     {
       "id": 26,
@@ -227,9 +230,10 @@
       "name": "HTML 5.2 New Features"
     },
     {
-      "id": 46,
+      "name": "Responsive Images (picture element, srcset/sizes etc.",
+      "description": "",
       "listId": 4,
-      "name": "Responsive Images (picture element, srcset/sizes etc."
+      "id": 46
     },
     {
       "id": 47,
@@ -710,6 +714,11 @@
       "name": "Varung",
       "listId": 1,
       "id": 142
+    },
+    {
+      "name": "Lob",
+      "listId": 1,
+      "id": 143
     }
   ],
   "lists": [
@@ -758,7 +767,8 @@
         15,
         8,
         10,
-        142
+        142,
+        143
       ],
       "id": 1
     },
@@ -940,9 +950,9 @@
   ],
   "listOrder": {
     "listPositions": [
-      3,
-      2,
       1,
+      2,
+      3,
       4,
       5,
       6,

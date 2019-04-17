@@ -67,14 +67,18 @@ class List extends Component {
                     {...provided.droppableProps}
                     ref={provided.innerRef}
                   >
-                    {listPosition.positionsArray.map((cardId, index) => (
-                      <Draggable
+                    {listPosition.positionsArray.map((cardId, index) => {
+                      const item = this.props.cards.find((card) => card.id === cardId);
+                      if(item === undefined) {
+                        return;
+                      }
+                      return <Draggable
                         draggableId={`dragLi-${this.props.currentList.id}-${index}`}
                         index={index}
                         key={index}
                       >
-                        {provided => (
-                          <li
+                        {provided => (             
+                           <li
                             edoiatribut={cardId} 
                             key={index}
                             ref={provided.innerRef}
@@ -82,13 +86,12 @@ class List extends Component {
                             {...provided.dragHandleProps}
                             onClick={this.handleClickModal}
                           >
-                            {this.props.cards.find((card) => {
-                              return card.id === cardId;
-                            }).name}
+                            {item.name}
                           </li>
-                        )}
+                          )
+                        }
                       </Draggable>
-                    ))
+                    })
                     }
                     {provided.placeholder}
                   </ul>

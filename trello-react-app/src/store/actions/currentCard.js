@@ -8,7 +8,5 @@ export const getCurrentCard = (currentCardid) => async dispatch => {
 }
 
 export const deleteCurrentUser = () => {
-  return dispatch => {
-    dispatch({type:DELETE_CURRENT_USER});
-  }
+  return ({type:DELETE_CURRENT_USER});
 }

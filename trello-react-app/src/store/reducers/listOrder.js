@@ -2,7 +2,7 @@ import { GET_LIST_ORDER, UPDATE_LIST_ORDER, ADD_LIST_ORDER } from '../actions/li
 
 const initialState = [];
 
-function lists(state = initialState,action) {
+function listOrder(state = initialState,action) {
     switch(action.type){
         case GET_LIST_ORDER:
         return action.data;
@@ -15,4 +15,4 @@ function lists(state = initialState,action) {
     }
 }
 
-export default lists;
+export default listOrder;

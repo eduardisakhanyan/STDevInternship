@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import NewItemForm from '../Forms/newItemForm';
 import { connect } from 'react-redux';
-//import { addNewList } from '../../store/actions/lists';
-//import { addNewProductsList } from '../../store/actions/products';
 import { updateData } from '../../store/actions/data';
 
 class AddNewList extends Component {
