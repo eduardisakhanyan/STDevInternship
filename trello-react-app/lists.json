@@ -1,9 +1,15 @@
 {
   "cards": [
     {
-      "id": 1,
+      "name": "Complete ",
+      "description": "234",
+      "users": [
+        3,
+        2,
+        1
+      ],
       "listId": 2,
-      "name": "Complete mock-up for client website"
+      "id": 1
     },
     {
       "id": 2,
@@ -58,10 +64,11 @@
       "id": 11
     },
     {
-      "name": "CodePen work on Twitter",
+      "name": "CodePen work",
       "description": "",
       "listId": 2,
-      "id": 12
+      "id": 12,
+      "users": []
     },
     {
       "id": 13,
@@ -69,8 +76,9 @@
       "name": "Listen to new Syntax.fm episode"
     },
     {
-      "listId": 1,
       "name": "Barlus tigin arus",
+      "description": "",
+      "listId": 1,
       "id": 14
     },
     {
@@ -132,7 +140,11 @@
     {
       "id": 26,
       "listId": 1,
-      "name": "CSS Methodologies (BEM, SMACSS etc."
+      "name": "CSS Methodologies (BEM, SMACSS etc.",
+      "users": [
+        1
+      ],
+      "description": ""
     },
     {
       "id": 27,
@@ -776,8 +788,8 @@
       "listId": 2,
       "positionsArray": [
         12,
-        3,
         1,
+        3,
         17
       ],
       "id": 2

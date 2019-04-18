@@ -1,6 +1,25 @@
 import React, { Component } from 'react';
+import Modal from 'react-modal';
+import AddNewUser from './addNewUser';
 
 class BoardControls extends Component {
+
+    state = {
+        modalIsOpen: false,
+    }
+
+    openModal = () => {
+        this.setState({
+            modalIsOpen: true,
+        });
+    }
+
+    closeModal = () => {
+        this.setState({
+            modalIsOpen: false,
+        })
+    }
+
     render() {
         return(
         <div className="board-controls">
@@ -17,6 +36,15 @@ class BoardControls extends Component {
 
             <button className="private-btn btn"><i className="fas fa-briefcase private-btn-icon" aria-hidden="true"></i>Private</button>
 
+            <button className="personal-btn btn" onClick={this.openModal}>Add User</button>
+            <Modal 
+                isOpen={this.state.modalIsOpen}
+                onRequestClose={this.closeModal}
+                className='modal'
+                contentLabel="Example Modal"
+            >
+                <AddNewUser closeModal={this.closeModal}/>
+            </Modal>
 	    </div>
         );
     }

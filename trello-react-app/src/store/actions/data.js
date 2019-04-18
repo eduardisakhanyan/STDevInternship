@@ -2,6 +2,7 @@ import { getLists, GET_LISTS, addNewList, UPDATE_LISTS } from "./lists";
 import { getCards, GET_CARDS, addNewCard, ADD_CARD } from "./cards";
 import { addCardInPositions, getCardsPositions, GET_CARDS_POSITIONS, addNewProductsList, ADD_NEW_ARRAY, UPDATE_CARDS_POSITIONS } from "./products";
 import { GET_LIST_ORDER, getListOrder, ADD_LIST_ORDER, addInOrder } from './listOrder';
+import { getUsers, GET_USERS } from './users';
 import { batchActions } from 'redux-batched-actions';
 
 export const getData = () => async dispatch => {
@@ -13,11 +14,14 @@ export const getData = () => async dispatch => {
   console.log(positions);
   const listOrder = await getListOrder();
   console.log(listOrder);
+  const users = await getUsers();
+  console.log(users);
   return dispatch(batchActions([
       {type:GET_LISTS, data: lists},
       {type:GET_CARDS, data: cards},
       {type:GET_CARDS_POSITIONS, data: positions},
-      {type:GET_LIST_ORDER, data: listOrder}
+      {type:GET_LIST_ORDER, data: listOrder},
+      {type:GET_USERS, data: users},
     ])
   );
 }

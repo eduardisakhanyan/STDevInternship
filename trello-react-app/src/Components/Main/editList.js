@@ -2,52 +2,61 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import EditItemForm from '../Forms/editItemForm';
 import { updateCard } from '../../store/actions/cards';
-import { deleteCurrentUser } from '../../store/actions/currentCard';
+import { updateUsersInCards } from '../../store/actions/cards';
+import Select from 'react-select';
 
 class EditList extends Component {
-  state = {
-  }
 
   handleSubmit = (value) => {
     this.props.updateCard(
       value,
       this.props.currentCard
-      );
-    this.props.deleteCurrentUser();
+    );
+    this.props.closeModal();
+  }
+
+  handleChange = (value) => {
+    this.props.updateUsersInCards(value,
+      this.props.currentCard);
   }
 
   initialValues = () => {
-    console.log(this.props.currentCard);
-    return{   
+    return {
       name: this.props.currentCard.name,
       description: this.props.currentCard.description || ''
     }
   }
 
-  render(){
+  render() {
     return (
-    <div className='modal'>
-      <div className='modal-content'>
+      <>
+        {this.props.currentCard.users && 
+        this.props.currentCard.users.map((userId,index) => {
+          return <li key={index}>{this.props.users[userId - 1].value}</li>
+        })
+        }
+        <Select options={this.props.users}
+          onChange={this.handleChange}/>
         <EditItemForm onSubmit={this.handleSubmit}
-        initialValues={this.initialValues()} />
-      </div>
-    </div>
+          initialValues={this.initialValues()} />
+      </>
     );
   }
 }
 
 const mapStateToProps = state => {
   return {
-    currentCard: state.currentCard
+    currentCard: state.currentCard,
+    users: state.users
   }
 }
 
 const mapDispatchToProps = {
   updateCard,
-  deleteCurrentUser
+  updateUsersInCards
 };
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-  )(EditList);
+)(EditList);
