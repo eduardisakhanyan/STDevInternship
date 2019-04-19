@@ -4,9 +4,8 @@
       "name": "Complete ",
       "description": "234",
       "users": [
-        3,
         2,
-        1
+        3
       ],
       "listId": 2,
       "id": 1
@@ -68,7 +67,9 @@
       "description": "",
       "listId": 2,
       "id": 12,
-      "users": []
+      "users": [
+        2
+      ]
     },
     {
       "id": 13,
@@ -138,12 +139,10 @@
       "id": 25
     },
     {
-      "id": 26,
-      "listId": 1,
+      "id": 7,
+      "listId": 3,
       "name": "CSS Methodologies (BEM, SMACSS etc.",
-      "users": [
-        1
-      ],
+      "users": [],
       "description": ""
     },
     {
@@ -240,497 +239,6 @@
       "id": 45,
       "listId": 4,
       "name": "HTML 5.2 New Features"
-    },
-    {
-      "name": "Responsive Images (picture element, srcset/sizes etc.",
-      "description": "",
-      "listId": 4,
-      "id": 46
-    },
-    {
-      "id": 47,
-      "listId": 4,
-      "name": "Serverless"
-    },
-    {
-      "id": 48,
-      "listId": 4,
-      "name": "Variable Fonts"
-    },
-    {
-      "id": 49,
-      "listId": 3,
-      "name": "Shadow DOM"
-    },
-    {
-      "id": 50,
-      "listId": 4,
-      "name": "ES6+"
-    },
-    {
-      "id": 51,
-      "listId": 4,
-      "name": "JSON & AJAX"
-    },
-    {
-      "id": 52,
-      "listId": 4,
-      "name": "API's"
-    },
-    {
-      "id": 53,
-      "listId": 4,
-      "name": "JavaScript Patterns"
-    },
-    {
-      "id": 54,
-      "listId": 4,
-      "name": "JavaScript Testing"
-    },
-    {
-      "id": 55,
-      "listId": 4,
-      "name": "jQuery"
-    },
-    {
-      "id": 56,
-      "listId": 4,
-      "name": "SVG"
-    },
-    {
-      "id": 57,
-      "listId": 4,
-      "name": "React JS"
-    },
-    {
-      "id": 58,
-      "listId": 4,
-      "name": "Angular JS"
-    },
-    {
-      "id": 59,
-      "listId": 4,
-      "name": "TypeScript"
-    },
-    {
-      "id": 60,
-      "listId": 4,
-      "name": "Vue JS"
-    },
-    {
-      "id": 61,
-      "listId": 4,
-      "name": "Node JS"
-    },
-    {
-      "id": 62,
-      "listId": 4,
-      "name": "Webpack"
-    },
-    {
-      "id": 63,
-      "listId": 4,
-      "name": "SEO Techniques"
-    },
-    {
-      "id": 64,
-      "listId": 4,
-      "name": "HTML Emails"
-    },
-    {
-      "id": 65,
-      "listId": 4,
-      "name": "WordPress"
-    },
-    {
-      "id": 66,
-      "listId": 4,
-      "name": "Static Site Generators (Jekyll, Hugo, Gatsby etc."
-    },
-    {
-      "id": 67,
-      "listId": 5,
-      "name": "Code Academy"
-    },
-    {
-      "id": 68,
-      "listId": 5,
-      "name": "CodePen"
-    },
-    {
-      "id": 69,
-      "listId": 5,
-      "name": "Codrops"
-    },
-    {
-      "id": 70,
-      "listId": 5,
-      "name": "CSS-Tricks"
-    },
-    {
-      "id": 71,
-      "listId": 5,
-      "name": "Free Code Camp"
-    },
-    {
-      "id": 72,
-      "listId": 5,
-      "name": "Khan Academy"
-    },
-    {
-      "id": 73,
-      "listId": 5,
-      "name": "Lynda"
-    },
-    {
-      "id": 74,
-      "listId": 5,
-      "name": "Medium"
-    },
-    {
-      "id": 75,
-      "listId": 5,
-      "name": "Mozilla Developer Network"
-    },
-    {
-      "id": 76,
-      "listId": 5,
-      "name": "Stack Overflow"
-    },
-    {
-      "id": 77,
-      "listId": 5,
-      "name": "Team Treehouse"
-    },
-    {
-      "id": 78,
-      "listId": 5,
-      "name": "Tuts Plus"
-    },
-    {
-      "id": 79,
-      "listId": 5,
-      "name": "Udemy"
-    },
-    {
-      "id": 80,
-      "listId": 5,
-      "name": "WPSessions"
-    },
-    {
-      "id": 81,
-      "listId": 5,
-      "name": "YouTube"
-    },
-    {
-      "id": 82,
-      "listId": 9,
-      "name": "Adam Khoury"
-    },
-    {
-      "id": 83,
-      "listId": 6,
-      "name": "Brad Hussey"
-    },
-    {
-      "id": 84,
-      "listId": 6,
-      "name": "CSS-Tricks (Chris Coyier)"
-    },
-    {
-      "id": 85,
-      "listId": 6,
-      "name": "Derek Banas"
-    },
-    {
-      "id": 86,
-      "listId": 6,
-      "name": "DevTips (Travis Neilson)"
-    },
-    {
-      "id": 87,
-      "listId": 6,
-      "name": "Free Code Camp"
-    },
-    {
-      "id": 88,
-      "listId": 6,
-      "name": "Fun Fun Function (Mattias Petter Johansson)"
-    },
-    {
-      "id": 89,
-      "listId": 6,
-      "name": "Google Chrome Developers"
-    },
-    {
-      "id": 90,
-      "listId": 3,
-      "name": "Layout Land (Jen Simmons)"
-    },
-    {
-      "id": 91,
-      "listId": 6,
-      "name": "Learn Code Academy"
-    },
-    {
-      "id": 92,
-      "listId": 6,
-      "name": "Level Up Tuts (Scott Tolinski)"
-    },
-    {
-      "id": 93,
-      "listId": 6,
-      "name": "Mackenzie Child"
-    },
-    {
-      "id": 94,
-      "listId": 6,
-      "name": "Rachel Andrew"
-    },
-    {
-      "id": 95,
-      "listId": 6,
-      "name": "The Net Ninja (Shaun Pelling)"
-    },
-    {
-      "id": 96,
-      "listId": 6,
-      "name": "The New Boston (Bucky Roberts)"
-    },
-    {
-      "id": 97,
-      "listId": 6,
-      "name": "Traversy Media (Brad Traversy)"
-    },
-    {
-      "id": 98,
-      "listId": 6,
-      "name": "Wes Bos"
-    },
-    {
-      "id": 99,
-      "listId": 7,
-      "name": "Something cool with CSS Grid"
-    },
-    {
-      "id": 100,
-      "listId": 7,
-      "name": "Something cool with CSS Flexbox"
-    },
-    {
-      "id": 101,
-      "listId": 7,
-      "name": "Something cool with CSS animations"
-    },
-    {
-      "id": 102,
-      "listId": 7,
-      "name": "Something cool with CSS gradients"
-    },
-    {
-      "id": 103,
-      "listId": 7,
-      "name": "Something cool with CSS pseudo-elements"
-    },
-    {
-      "id": 104,
-      "listId": 7,
-      "name": "Something cool with SVG"
-    },
-    {
-      "id": 105,
-      "listId": 7,
-      "name": "Something cool with JavaScript"
-    },
-    {
-      "id": 106,
-      "listId": 7,
-      "name": "Something cool with all of the above"
-    },
-    {
-      "id": 107,
-      "listId": 8,
-      "name": "Airsoft/Paintballing Centre"
-    },
-    {
-      "id": 108,
-      "listId": 8,
-      "name": "Bar/Pub"
-    },
-    {
-      "id": 109,
-      "listId": 8,
-      "name": "Bicycle Shop/Repair"
-    },
-    {
-      "id": 110,
-      "listId": 8,
-      "name": "Cafe/Coffee Shop"
-    },
-    {
-      "id": 111,
-      "listId": 8,
-      "name": "Car Showroom/Garage/Repair/Parts"
-    },
-    {
-      "id": 112,
-      "listId": 8,
-      "name": "Construction Company"
-    },
-    {
-      "id": 113,
-      "listId": 8,
-      "name": "Fitness/Gym/Leisure Centre"
-    },
-    {
-      "id": 114,
-      "listId": 8,
-      "name": "Nightclub"
-    },
-    {
-      "id": 115,
-      "listId": 8,
-      "name": "Party Planning Company"
-    },
-    {
-      "id": 116,
-      "listId": 8,
-      "name": "PC Build/Repair Service"
-    },
-    {
-      "id": 117,
-      "listId": 8,
-      "name": "Portfolio/CV"
-    },
-    {
-      "id": 118,
-      "listId": 8,
-      "name": "Real Estate/AirBnB"
-    },
-    {
-      "id": 119,
-      "listId": 8,
-      "name": "Restaurant"
-    },
-    {
-      "id": 120,
-      "listId": 8,
-      "name": "Skiing/Snowboarding Centre/Company"
-    },
-    {
-      "id": 121,
-      "listId": 8,
-      "name": "Streaming Service for Movies/TV"
-    },
-    {
-      "id": 122,
-      "listId": 8,
-      "name": "Streaming Service for Video Games"
-    },
-    {
-      "id": 123,
-      "listId": 8,
-      "name": "Taxi Service"
-    },
-    {
-      "id": 124,
-      "listId": 8,
-      "name": "Travel Agency"
-    },
-    {
-      "id": 125,
-      "listId": 8,
-      "name": "Zoo/Safari Park"
-    },
-    {
-      "id": 126,
-      "listId": 9,
-      "name": "Analog Clock"
-    },
-    {
-      "id": 127,
-      "listId": 9,
-      "name": "Basic Quiz"
-    },
-    {
-      "id": 128,
-      "listId": 9,
-      "name": "Bill/Cost Splitter"
-    },
-    {
-      "id": 129,
-      "listId": 9,
-      "name": "Countdown Timer"
-    },
-    {
-      "id": 130,
-      "listId": 9,
-      "name": "Form Validator"
-    },
-    {
-      "id": 131,
-      "listId": 9,
-      "name": "Geolocation (Find places near you etc."
-    },
-    {
-      "id": 132,
-      "listId": 9,
-      "name": "Gif Search"
-    },
-    {
-      "id": 133,
-      "listId": 9,
-      "name": "Note Taking App"
-    },
-    {
-      "id": 134,
-      "listId": 8,
-      "name": "Random Name Picker"
-    },
-    {
-      "id": 135,
-      "listId": 9,
-      "name": "Secret Message Encoder/Decoder"
-    },
-    {
-      "id": 136,
-      "listId": 9,
-      "name": "Sortable Image Gallery"
-    },
-    {
-      "id": 137,
-      "listId": 9,
-      "name": "Sortable Table"
-    },
-    {
-      "id": 138,
-      "listId": 9,
-      "name": "Tip Calculator"
-    },
-    {
-      "id": 139,
-      "listId": 9,
-      "name": "To-Do List"
-    },
-    {
-      "id": 140,
-      "listId": 9,
-      "name": "Unit Converter"
-    },
-    {
-      "name": "Varung",
-      "listId": 2,
-      "id": 141
-    },
-    {
-      "name": "Varung",
-      "listId": 1,
-      "id": 142
-    },
-    {
-      "name": "Lob",
-      "listId": 1,
-      "id": 143
     }
   ],
   "lists": [
@@ -775,187 +283,99 @@
     {
       "listId": 1,
       "positionsArray": [
-        14,
-        15,
-        8,
-        10,
-        142,
-        143
+        2,
+        3,
+        4,
+        5
       ],
       "id": 1
     },
     {
       "listId": 2,
       "positionsArray": [
-        12,
         1,
-        3,
-        17
+        6,
+        7,
+        8,
+        9,
+        10
       ],
       "id": 2
     },
     {
       "listId": 3,
       "positionsArray": [
-        6,
-        2,
-        9,
-        26,
         11,
-        20,
-        22,
-        25,
-        18,
-        23,
-        24,
-        28,
-        19,
-        35,
-        21,
-        27,
-        29,
-        30,
-        31,
-        32,
-        33,
-        34,
-        36,
-        37,
-        38,
-        39,
-        40,
-        41,
-        42,
-        43,
-        44
+        12,
+        13,
+        14,
+        15
       ],
       "id": 3
     },
     {
       "listId": 4,
       "positionsArray": [
-        46,
-        45,
-        47,
-        48,
-        50,
-        51,
-        53,
-        54,
-        55,
-        52,
-        56,
-        57,
-        58,
-        59,
-        60,
-        61,
-        62,
-        63,
-        64,
-        65,
-        66
+        16,
+        17,
+        18,
+        19,
+        20
       ],
       "id": 4
     },
     {
       "listId": 5,
       "positionsArray": [
-        68,
-        67,
-        70,
-        71,
-        69,
-        72,
-        73,
-        74,
-        75,
-        76,
-        77,
-        78,
-        79,
-        80,
-        81
+        21,
+        22,
+        23,
+        24,
+        25
       ],
       "id": 5
     },
     {
       "listId": 6,
       "positionsArray": [
-        84,
-        85,
-        86,
-        88,
-        87,
-        83,
-        89,
-        91,
-        92,
-        93,
-        94,
-        95,
-        96,
-        97,
-        98
+        26,
+        27,
+        28,
+        29,
+        30
       ],
       "id": 6
     },
     {
       "listId": 7,
       "positionsArray": [
-        106,
-        99,
-        101,
-        103,
-        100,
-        102,
-        104,
-        105
+        31,
+        32,
+        33,
+        34,
+        35
       ],
       "id": 7
     },
     {
       "listId": 8,
       "positionsArray": [
-        110,
-        107,
-        108,
-        113,
-        109,
-        111,
-        112,
-        114,
-        118,
-        115,
-        116,
-        117,
-        119,
-        120,
-        121,
-        122,
-        123,
-        124,
-        125
+        36,
+        37,
+        38,
+        39,
+        40
       ],
       "id": 8
     },
     {
       "listId": 9,
       "positionsArray": [
-        126,
-        127,
-        129,
-        82,
-        130,
-        132,
-        133,
-        128,
-        136,
-        135,
-        137,
-        138,
-        139,
-        140
+        41,
+        42,
+        43,
+        44,
+        45
       ],
       "id": 9
     }
@@ -972,5 +392,235 @@
       8,
       9
     ]
-  }
+  },
+  "cardUsers": [
+    {
+      "cardId": 1,
+      "users": [
+        2,
+        3
+      ],
+      "id": 1
+    },
+    {
+      "cardId": 2,
+      "users": [],
+      "id": 2
+    },
+    {
+      "cardId": 3,
+      "users": [],
+      "id": 3
+    },
+    {
+      "cardId": 4,
+      "users": [],
+      "id": 4
+    },
+    {
+      "cardId": 5,
+      "users": [],
+      "id": 5
+    },
+    {
+      "cardId": 6,
+      "users": [],
+      "id": 6
+    },
+    {
+      "cardId": 7,
+      "users": [],
+      "id": 7
+    },
+    {
+      "cardId": 8,
+      "users": [],
+      "id": 8
+    },
+    {
+      "cardId": 9,
+      "users": [],
+      "id": 9
+    },
+    {
+      "cardId": 10,
+      "users": [],
+      "id": 10
+    },
+    {
+      "cardId": 11,
+      "users": [],
+      "id": 11
+    },
+    {
+      "cardId": 12,
+      "users": [],
+      "id": 12
+    },
+    {
+      "cardId": 13,
+      "users": [],
+      "id": 13
+    },
+    {
+      "cardId": 14,
+      "users": [],
+      "id": 14
+    },
+    {
+      "cardId": 15,
+      "users": [],
+      "id": 15
+    },
+    {
+      "cardId": 16,
+      "users": [],
+      "id": 16
+    },
+    {
+      "cardId": 17,
+      "users": [],
+      "id": 17
+    },
+    {
+      "cardId": 18,
+      "users": [],
+      "id": 18
+    },
+    {
+      "cardId": 19,
+      "users": [],
+      "id": 19
+    },
+    {
+      "cardId": 20,
+      "users": [],
+      "id": 20
+    },
+    {
+      "cardId": 21,
+      "users": [],
+      "id": 21
+    },
+    {
+      "cardId": 22,
+      "users": [],
+      "id": 22
+    },
+    {
+      "cardId": 23,
+      "users": [],
+      "id": 23
+    },
+    {
+      "cardId": 24,
+      "users": [],
+      "id": 24
+    },
+    {
+      "cardId": 25,
+      "users": [],
+      "id": 25
+    },
+    {
+      "cardId": 26,
+      "users": [],
+      "id": 26
+    },
+    {
+      "cardId": 27,
+      "users": [],
+      "id": 27
+    },
+    {
+      "cardId": 28,
+      "users": [],
+      "id": 28
+    },
+    {
+      "cardId": 29,
+      "users": [],
+      "id": 29
+    },
+    {
+      "cardId": 30,
+      "users": [],
+      "id": 30
+    },
+    {
+      "cardId": 31,
+      "users": [],
+      "id": 31
+    },
+    {
+      "cardId": 32,
+      "users": [],
+      "id": 32
+    },
+    {
+      "cardId": 33,
+      "users": [],
+      "id": 33
+    },
+    {
+      "cardId": 34,
+      "users": [],
+      "id": 34
+    },
+    {
+      "cardId": 35,
+      "users": [],
+      "id": 35
+    },
+    {
+      "cardId": 36,
+      "users": [],
+      "id": 36
+    },
+    {
+      "cardId": 37,
+      "users": [],
+      "id": 37
+    },
+    {
+      "cardId": 38,
+      "users": [],
+      "id": 38
+    },
+    {
+      "cardId": 39,
+      "users": [],
+      "id": 39
+    },
+    {
+      "cardId": 40,
+      "users": [],
+      "id": 40
+    },
+    {
+      "cardId": 41,
+      "users": [],
+      "id": 41
+    },
+    {
+      "cardId": 42,
+      "users": [],
+      "id": 42
+    },
+    {
+      "cardId": 43,
+      "users": [],
+      "id": 43
+    },
+    {
+      "cardId": 44,
+      "users": [],
+      "id": 44
+    },
+    {
+      "cardId": 45,
+      "users": [],
+      "id": 45
+    }
+  ]
 }

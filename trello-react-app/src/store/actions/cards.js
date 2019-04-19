@@ -1,7 +1,6 @@
 export const UPDATE_CARDS = 'UPDATE_CARDS';
 export const GET_CARDS = 'GET_CARDS';
 export const ADD_CARD = 'ADD_CARD';
-export const UPDATE_CURRENT_CARD = 'UPDATE_CURRENT_CARD';
 
 export const getCards = async () => {
   const cards = await fetch('http://localhost:3004/cards')
@@ -43,37 +42,4 @@ export const getFilteredCards = (value) => async dispatch => {
     .then(response => response.json())
   }
   return dispatch({type: GET_CARDS,data: filteredCards});
-}
-
-export const updateUsersInCards = (value,currentCard) => async dispatch => {
-  if(!currentCard.users) {
-    currentCard.users = [];
-  }
-  const index = currentCard.users.indexOf(value.id);
-  console.log(index);
-  if(index !== -1) {
-    currentCard.users.splice(index,1);
-    const result = await fetch('http://localhost:3004/cards/' + currentCard.id, {
-      method: 'PATCH',
-      headers: new Headers({ 'content-type': 'application/json' }),
-      body: JSON.stringify({
-        users: currentCard.users
-      })
-    })
-    .then(response => response.json())
-    console.log(result);
-    return dispatch({ type: UPDATE_CURRENT_CARD, data: result });
-  } else {
-    currentCard.users.push(value.id);
-    const result = await fetch('http://localhost:3004/cards/' + currentCard.id, {
-      method: 'PATCH',
-      headers: new Headers({ 'content-type': 'application/json' }),
-      body: JSON.stringify({
-        users: currentCard.users
-      })
-    })
-    .then(response => response.json())
-    console.log(result);
-    return dispatch({ type: UPDATE_CURRENT_CARD, data: result });
-  }
 }

@@ -6,7 +6,8 @@ import cards from './cards';
 import cardsPositions from './products';
 import listOrder from './listOrder';
 import currentCard from './currentCard';
-import users from './users'
+import users from './users';
+import cardUsers from './cardUsers';
 
 const rootReducer = combineReducers({
   lists,
@@ -15,6 +16,7 @@ const rootReducer = combineReducers({
   listOrder,
   currentCard,
   users,
+  cardUsers,
   form: formReducer,
 });
 

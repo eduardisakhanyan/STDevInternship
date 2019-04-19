@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import EditItemForm from '../Forms/editItemForm';
 import { updateCard } from '../../store/actions/cards';
-import { updateUsersInCards } from '../../store/actions/cards';
+import { updateUsersInCard } from '../../store/actions/cardUsers';
 import Select from 'react-select';
 
 class EditList extends Component {
@@ -16,8 +16,8 @@ class EditList extends Component {
   }
 
   handleChange = (value) => {
-    this.props.updateUsersInCards(value,
-      this.props.currentCard);
+    this.props.updateUsersInCard(value,
+      this.props.cardUsers[this.props.currentCard.id - 1]);
   }
 
   initialValues = () => {
@@ -30,8 +30,8 @@ class EditList extends Component {
   render() {
     return (
       <>
-        {this.props.currentCard.users && 
-        this.props.currentCard.users.map((userId,index) => {
+        {this.props.currentCard && 
+        this.props.cardUsers[this.props.currentCard.id - 1].users.map((userId,index) => {
           return <li key={index}>{this.props.users[userId - 1].value}</li>
         })
         }
@@ -47,13 +47,14 @@ class EditList extends Component {
 const mapStateToProps = state => {
   return {
     currentCard: state.currentCard,
-    users: state.users
+    users: state.users,
+    cardUsers: state.cardUsers,
   }
 }
 
 const mapDispatchToProps = {
   updateCard,
-  updateUsersInCards
+  updateUsersInCard
 };
 
 export default connect(
